@@ -1,0 +1,12 @@
+.animalBtn {
+	margin: 3px 3px;
+}
+
+#gif-display {
+	display: inline;
+}
+
+.gifDiv {
+	float: left;
+	margin: 3px 6px;
+}
