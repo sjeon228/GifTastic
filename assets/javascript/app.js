@@ -12,14 +12,14 @@ $(document).ready(function(){
 	function makeBtn() {
 		$("#button-display").empty();
 
-	for (var a = 0; a < btnArr.length; a++){
-		var newBtn = $("<button>");
+		for (var a = 0; a < btnArr.length; a++){
+			var newBtn = $("<button>");
 
-		newBtn.addClass("btn btn-default animalBtn").text(btnArr[a]).data("name", btnArr[a]);
+			newBtn.addClass("btn btn-default animalBtn").text(btnArr[a]).data("name", btnArr[a]);
 
-		$("#button-display").append(newBtn);
+			$("#button-display").append(newBtn);
 
-	}
+		}
 	}
 
 	$("#submitBtn").on("click", function(event){
@@ -34,11 +34,13 @@ $(document).ready(function(){
 
 		makeBtn();
 	})
+
 	$(document).on("click", ".animalBtn", function() {
 		$("#gif-display").empty();
 		$("#gifText").empty();
+		$(".body").css({"background-size": "100% 100%"});
 
-		var gifText = $("<h3>").text("Click on an image for some magic!");
+		var gifText = $("<h2>").text("Click on an image for some magic!");
 
 		$("#gifText").append(gifText);
 
@@ -77,23 +79,18 @@ $(document).ready(function(){
 				gifDiv.append(animalImage);
 
 				$("#gif-display").prepend(gifDiv);
-
-				
-
 			}
-			
 		})
 		$(document).on("click", ".gifs", function() {
-					var state = $(this).attr("data-state");
-
-					if (state === "still") {
-						$(this).attr("src", $(this).attr("data-animate"));
-						$(this).attr("data-state", "animate");
-					}
-					else{
-						$(this).attr("src", $(this).attr("data-still"));
-						$(this).attr("data-state", "still");
-					}
-				})
+			var state = $(this).attr("data-state");
+				if (state === "still") {
+					$(this).attr("src", $(this).attr("data-animate"));
+					$(this).attr("data-state", "animate");
+				}
+				else{
+					$(this).attr("src", $(this).attr("data-still"));
+					$(this).attr("data-state", "still");
+				}
+			})
 	})
 })

@@ -1,5 +1,36 @@
+.body{
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 320%;
+}
+
+.container {
+	font-family: 'Luckiest Guy', cursive;
+	
+}
+
+.header {
+	text-align: center;
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+h1, h2 {
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+p {
+	font-size: 20px;
+	margin: 10px 0 10px;
+}
+
 .animalBtn {
 	margin: 3px 3px;
+	background: lightgrey;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 #gif-display {
@@ -9,4 +40,8 @@
 .gifDiv {
 	float: left;
 	margin: 3px 6px;
+}
+
+#submitBtn {
+	margin-top: 10px;
 }
