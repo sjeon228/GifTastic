@@ -81,7 +81,8 @@ $(document).ready(function(){
 				$("#gif-display").prepend(gifDiv);
 			}
 		})
-		$(document).on("click", ".gifs", function() {
+	})
+	$(document).on("click", ".gifs", function() {
 			var state = $(this).attr("data-state");
 				if (state === "still") {
 					$(this).attr("src", $(this).attr("data-animate"));
@@ -92,5 +93,4 @@ $(document).ready(function(){
 					$(this).attr("data-state", "still");
 				}
 			})
-	})
 })
